@@ -1,0 +1,87 @@
+{
+  "A": {
+    "change": {
+      "MOCK_ERROR_RATE": "0.2"
+    },
+    "alert": "AgentHighErrorRate",
+    "pending_s": 34,
+    "firing_s": 95,
+    "metrics_at_firing": {
+      "err_rate": 0.1954,
+      "p95_s": 0.2904,
+      "cost_per_h": 2.0873,
+      "tokens_per_s": 1722.8079,
+      "up": 2.0
+    },
+    "note": "đo 17:49-17:52; số theo chaos_log.txt"
+  },
+  "B": {
+    "change": {
+      "MOCK_SLOW_RATE": "0.3"
+    },
+    "alert": "AgentHighLatencyP95",
+    "pending_s": 28.904863119125366,
+    "firing_s": 149.06712341308594,
+    "metrics_at_end": {
+      "err_rate": 0.0148,
+      "p95_s": 1.9148,
+      "cost_per_h": 1.908,
+      "tokens_per_s": 1649.1927,
+      "up": 2.0
+    },
+    "alerts": {
+      "AgentHighLatencyP95": "firing"
+    }
+  },
+  "C": {
+    "change": {
+      "LLM_MODEL": "mock-llm-large"
+    },
+    "alert": "LLMCostBurnRateHigh",
+    "pending_s": 22.7833514213562,
+    "firing_s": 143.0120770931244,
+    "metrics_at_end": {
+      "err_rate": 0.0123,
+      "p95_s": 0.7125,
+      "cost_per_h": 16.1155,
+      "tokens_per_s": 1821.2961,
+      "up": 2.0
+    },
+    "alerts": {
+      "LLMCostBurnRateHigh": "firing"
+    }
+  },
+  "D": {
+    "change": "docker pause agent-1",
+    "alert": "AgentInstanceDown",
+    "pending_s": 15.10147500038147,
+    "firing_s": 45.133501291275024,
+    "metrics_at_end": {
+      "err_rate": 0.0068,
+      "p95_s": 0.2913,
+      "cost_per_h": 2.1632,
+      "tokens_per_s": 1492.1753,
+      "up": 1.0
+    },
+    "alerts": {
+      "AgentInstanceDown": "firing",
+      "LLMCostBurnRateHigh": "firing"
+    }
+  },
+  "E": {
+    "change": {
+      "AGENT_VERSION": "v1"
+    },
+    "alert": null,
+    "pending_s": null,
+    "firing_s": null,
+    "metrics_at_end": {
+      "err_rate": 0.0103,
+      "p95_s": 0.1984,
+      "cost_per_h": 1.8783,
+      "tokens_per_s": 1077.8505,
+      "up": 2.0
+    },
+    "alerts": {}
+  }
+}
